@@ -9,5 +9,6 @@ class Country extends Model
 {
     use HasFactory;
     public $timestamps = true;
+    
 
 }
