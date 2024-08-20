@@ -31,7 +31,7 @@ class HomeController extends Controller
 
     public function index(Request $request)
     {
-        $banks = Bank::orderBy('name', 'asc')->get();
+        // $banks = Bank::orderBy('name', 'asc')->get();
         $countrys = Country::orderBy('name', 'asc')->get();
 
         $perPage = $request->get('per_page', 1000);
