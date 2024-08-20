@@ -17,8 +17,6 @@ use Mail;
 use Image;
 use File;
 
-// $locale = App::currentLocale();
-
 class HomeController extends Controller
 {
     function __construct()
@@ -32,7 +30,7 @@ class HomeController extends Controller
     public function index(Request $request)
     {
         // $banks = Bank::orderBy('name', 'asc')->get();
-        $countrys = Country::orderBy('name', 'asc')->get();
+        // $countrys = Country::orderBy('name', 'asc')->get();
 
         $perPage = $request->get('per_page', 1000);
 
