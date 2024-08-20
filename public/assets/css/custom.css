@@ -1,0 +1,12 @@
+*{margin: 0;padding: 0;}
+body{background: url(../img/back.png);}
+.main{margin-top: 50px;}
+.main h3{text-align: center;color: #fff;}
+.table-bordered td, .table-bordered th{color: #fff;}
+.table-bordered .bin{ padding:2px }
+.table-bordered .bin textarea{ width:100%; padding:10px }
+.table-bordered .vendor{ display:flex; flex-direction: column; }
+.table-bordered .region div{ display:flex; align-items: center; margin:15px 0px}
+.table-bordered .region div select{ margin-left:15px; padding:2px; border:none; border-radius:3px; font-size:.7rem; width: 300px;  }
+.table-bordered .region div select:focus-visible{ outline:none }
+.table-bordered .region div input{ margin-left:15px }
