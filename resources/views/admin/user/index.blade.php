@@ -14,8 +14,6 @@
             <div class="card-header d-flex flex-row align-items-center justify-content-between">
                 <ul class="nav nav-pills">
                     <li><a data-toggle="tab" class="nav-link active" href="#tab1">All</a></li>
-                    <!-- <li><a data-toggle="tab" class="nav-link " href="#tab2">Hiển thị</a></li> -->
-                    <!-- <li><a data-toggle="tab" class="nav-link" href="#tab3">Ẩn</a></li> -->
                 </ul>
             </div>
             <div class="tab-content overflow">

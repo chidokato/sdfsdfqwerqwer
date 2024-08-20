@@ -7,21 +7,21 @@
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow fixed">
     <button type="button" id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3"><i class="fa fa-bars"></i></button>
     <ul class="navbar-nav ">
-        <li class="nav-item"> <a class="nav-link line-1" href="{{route('users.index')}}" ><i class="fa fa-chevron-left" aria-hidden="true"></i> <span class="mobile-hide">Quay lại</span> </a> </li>
+        <li class="nav-item"> <a class="nav-link line-1" href="{{route('users.index')}}" ><i class="fa fa-chevron-left" aria-hidden="true"></i> <span class="mobile-hide">back</span> </a> </li>
     </ul>
     <ul class="navbar-nav ml-auto">
         <li class="nav-item mobile-hide">
-            <button type="reset" class="btn-danger mr-2 form-control"><i class="fas fa-sync"></i> Làm mới</button>
+            <button type="reset" class="btn-danger mr-2 form-control"><i class="fas fa-sync"></i> reset</button>
         </li>
         <div class="topbar-divider d-none d-sm-block"></div>
         <li class="nav-item">
-            <button type="submit" class="btn-success form-control"><i class="far fa-save"></i> Lưu lại</button>
+            <button type="submit" class="btn-success form-control"><i class="far fa-save"></i> save</button>
         </li>
     </ul>
 </nav>
 
 <div class="d-sm-flex align-items-center justify-content-between mb-3 flex" style="height: 38px;">
-    <h2 class="h3 mb-0 text-gray-800 line-1 size-1-3-rem">Thêm mới</h2>
+    <h2 class="h3 mb-0 text-gray-800 line-1 size-1-3-rem">add</h2>
 </div>
 
 <div class="row">
@@ -29,7 +29,7 @@
         <div class="card shadow mb-2">
             <div class="card-header d-flex flex-row align-items-center justify-content-between">
                 <ul class="nav nav-pills">
-                    <li><a data-toggle="tab" class="nav-link active" href="#vi">Người dùng</a></li>
+                    <li><a data-toggle="tab" class="nav-link active" href="#vi">User</a></li>
                 </ul>
             </div>
             <div class="tab-content overflow">
@@ -42,7 +42,7 @@
                                   <input name="email" placeholder="..." type="text" class="form-control">
                               </div>
                               <div class="form-group">
-                                  <label>Quyền người dùng</label>
+                                  <label>permission</label>
                                   <select name="permission" class="form-control">
                                     <option value="6">Member</option>
                                     <option value="1">SuperAdmin</option>
@@ -51,25 +51,25 @@
                                   </select>
                               </div>
                               <div class="form-group">
-                                  <div class="edit_pass"><label>Mật khẩu</label> <!-- <label class="cursor_pointer"><input type="checkbox" id='changepassword' name="changepassword" />  <strong>EDIT</strong> </label> --> </div>
+                                  <div class="edit_pass"><label>password</label> <!-- <label class="cursor_pointer"><input type="checkbox" id='changepassword' name="changepassword" />  <strong>EDIT</strong> </label> --> </div>
                                   <input value="123456" name="password" placeholder="Password" type="password" class="form-control pass">
                               </div>
                               <div class="form-group">
-                                  <label class="">Nhập lại mật khẩu</label>
+                                  <label class="">passwordagain</label>
                                   <input value="123456" name="passwordagain" placeholder="Confirm password" type="password" class="form-control pass">
                               </div>
                           </div>
                           <div class="col-md-6">
                               <div class="form-group">
-                                  <label>Họ & Tên</label>
+                                  <label>yourname</label>
                                   <input name="yourname" placeholder="..." type="text" class="form-control">
                               </div>
                               <div class="form-group">
-                                  <label>Địa chỉ</label>
+                                  <label>address</label>
                                   <input name="address" placeholder="..." type="text" class="form-control">
                               </div>
                               <div class="form-group">
-                                  <label>Số điện thoại</label>
+                                  <label>phone</label>
                                   <input name="phone" placeholder="..." type="text" class="form-control">
                               </div>
                               <div class="form-group">
