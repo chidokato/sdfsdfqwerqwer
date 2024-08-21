@@ -45,7 +45,7 @@ class HomeController extends Controller
 
         $bins = array_filter(preg_split('/\r\n|\r|\n/', $request->bin));
 
-        $datas = Data::orderBy('id', 'DESC');
+        $datas = Data::orderBy('Bin', 'ASC');
         if (!empty($bins)) {
             $datas->whereIn('Bin', $bins);
         }

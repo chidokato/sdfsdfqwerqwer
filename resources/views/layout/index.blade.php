@@ -139,6 +139,7 @@
                                 <th scope="col">VENDOR</th>
                                 <th scope="col">LEVEL</th>
                                 <th scope="col">RANK</th>
+                                <th scope="col">BANK</th>
                                 <th scope="col">Countries</th>
                             </tr>
                         </thead>
@@ -149,6 +150,7 @@
                                 <td>{{$val->Brand}}</td>
                                 <td>{{$val->Level}}</td>
                                 <td>{{$val->Type}}</td>
+                                <td>{{$val->Bank}}</td>
                                 <td>{{$val->Countries}}</td>
                             </tr>
                             @endforeach
