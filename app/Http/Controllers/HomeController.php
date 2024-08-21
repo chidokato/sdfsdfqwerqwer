@@ -52,6 +52,9 @@ class HomeController extends Controller
         if ($vendors = $request->vendor) {
             $datas->whereIn('Brand', $vendors);
         }
+        if ($Level = $request->Level) {
+            $datas->whereIn('Level', $Level);
+        }
         if($country = request()->country){
             $datas->where('Countries', $country);
         }

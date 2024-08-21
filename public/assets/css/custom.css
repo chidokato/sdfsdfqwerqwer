@@ -10,3 +10,9 @@ body{background: url(../img/back.png);}
 .table-bordered .region div select{ margin-left:15px; padding:2px; border:none; border-radius:3px; font-size:.7rem; width: 300px;  }
 .table-bordered .region div select:focus-visible{ outline:none }
 .table-bordered .region div input{ margin-left:15px }
+label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.Level{ display:flex; flex-direction: column;}

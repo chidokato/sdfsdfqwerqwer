@@ -26,14 +26,14 @@
                             <tr>
                             <th scope="col">BIN's</th>
                             <th scope="col">VENDOR</th>
-                            <th scope="col">LEVEL</th>
+                            <th scope="col" colspan="2">LEVEL</th>
                             <th scope="col">REGION</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td class="bin">
-                                    <textarea placeholder="Each bin in a new line" name="bin" class="form-control" rows="6"></textarea>
+                                    <textarea placeholder="Each bin in a new line" name="bin" class="form-control" rows="6">  </textarea>
                                 </td>
                                 <td class="vendor">
                                     <label>
@@ -53,13 +53,25 @@
                                     </label>
                                 </td>
 
-                                <td class="Level">
-                                    <!-- <label>
-                                        <input type="checkbox" name="Level" value="Classic" > Classic
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="Level" value="Gold" > Gold
-                                    </label> -->
+                                <td>
+                                    <div class="Level">
+                                        <label><input type="checkbox" name="Level[]" value="Classic" > Classic </label>
+                                        <label><input type="checkbox" name="Level[]" value="Gold" > Gold </label>
+                                        <label><input type="checkbox" name="Level[]" value="Premier" > Premier </label>
+                                        <label><input type="checkbox" name="Level[]" value="Platinum" > Platinum </label>
+                                        <label><input type="checkbox" name="Level[]" value="Signature" > Signature </label>
+                                        <label><input type="checkbox" name="Level[]" value="Electron" > Electron </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="Level">
+                                        <label><input type="checkbox" name="Level[]" value="Prepaid" > Prepaid </label>
+                                        <label><input type="checkbox" name="Level[]" value="Business" > Business </label>
+                                        <label><input type="checkbox" name="Level[]" value="Corporate" > Corporate </label>
+                                        <label><input type="checkbox" name="Level[]" value="Infinite" > Infinite </label>
+                                        <label><input type="checkbox" name="Level[]" value="World" > World </label>
+                                        <label><input type="checkbox" name="Level[]" value="Enhanced" > Enhanced </label>
+                                    </div>
                                 </td>
                                 <td class="region">
                                     <div>
@@ -101,8 +113,7 @@
                                         Reset
                                     </a>
                                 </td>
-                                <td></td>
-                                <td></td>
+                                <td colspan="3"></td>
                             </tr>
                         </tbody>
                     </table>
