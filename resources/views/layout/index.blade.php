@@ -15,7 +15,8 @@
 
 </head>
 <body>
-    <form action="search" method="POST">
+    <form id="searchForm" action="{{ route('search') }}" method="POST">
+        @csrf
     <section class="main">
         <div class="container">
             <div class="row">
@@ -36,28 +37,29 @@
                                 </td>
                                 <td class="vendor">
                                     <label>
-                                        <input type="checkbox" name="vendor[]" value="Visa" > Visa
+                                        <input type="checkbox" name="vendor[]" value="Visa"> Visa
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="vendor[]" value="Mastercard" > Mastercard
+                                        <input type="checkbox" name="vendor[]" value="Mastercard"> Mastercard
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="vendor[]" value="American Express" > American Express
+                                        <input type="checkbox" name="vendor[]" value="American Express"> American Express
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="vendor[]" value="Maestro" > Maestro
+                                        <input type="checkbox" name="vendor[]" value="Maestro"> Maestro
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="vendor[]" value="Discover" > Discover
+                                        <input type="checkbox" name="vendor[]" value="Discover"> Discover
                                     </label>
                                 </td>
+
                                 <td class="Level">
-                                    <label>
-                                        <input type="checkbox" name="Level[]" value="Classic" > Classic
+                                    <!-- <label>
+                                        <input type="checkbox" name="Level" value="Classic" > Classic
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="Level[]" value="Gold" > Gold
-                                    </label>
+                                        <input type="checkbox" name="Level" value="Gold" > Gold
+                                    </label> -->
                                 </td>
                                 <td class="region">
                                     <div>
@@ -91,9 +93,11 @@
                                 </td>
                             </tr>
                             <tr class="button">
-                                <td><button type="submit" class="btn btn-success">Search</button></td>
                                 <td>
-                                    <a href="{{ url()->current() }}" class="btn btn-warning">
+                                    <button type="submit" class="btn btn-success">Search</button>
+                                </td>
+                                <td>
+                                    <a href="{{ asset('') }}" class="btn btn-warning">
                                         Reset
                                     </a>
                                 </td>
@@ -108,6 +112,46 @@
     </section>
 
     </form>
+
+
+    <section class="main">
+        <div class="container">
+            <div class="row">
+                @if(isset($datas))
+                <div class="col-md-12">
+                    <h3>Results (max 1000): {{ count($datas) }}</h3> <?php $i = count($datas); ?>
+                    @if(count($datas)>0)
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">BIN's</th>
+                            <th scope="col">VENDOR</th>
+                            <th scope="col">LEVEL</th>
+                            <th scope="col">RANK</th>
+                            <th scope="col">Countries</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($datas as $val)
+                            <tr>
+                                <td>{{ $i }}</td>
+                                <td>{{$val->Bin}}</td>
+                                <td>{{$val->Brand}}</td>
+                                <td>{{$val->Level}}</td>
+                                <td>{{$val->Type}}</td>
+                                <td>{{$val->Countries}}</td>
+                            </tr>
+                            <?php $i = $i-1; ?>
+                            @endforeach
+                        </tbody>
+                    </table>
+                    @endif
+                </div>
+                @endif
+            </div>
+        </div>
+    </section>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="admin_asset/bootstrap/js/bootstrap.bundle.min.js"></script>

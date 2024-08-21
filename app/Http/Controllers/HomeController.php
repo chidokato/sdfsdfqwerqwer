@@ -43,21 +43,31 @@ class HomeController extends Controller
         $banks = Bank::orderBy('name', 'asc')->get();
         $countrys = Country::orderBy('name', 'asc')->get();
 
+        $bins = array_filter(preg_split('/\r\n|\r|\n/', $request->bin));
+
         $datas = Data::orderBy('id', 'DESC');
-        if($key = request()->key){
-            $datas->where('Bin', $key);
+        if (!empty($bins)) {
+            $datas->whereIn('Bin', $bins);
+        }
+        if ($vendors = $request->vendor) {
+            $datas->whereIn('Brand', $vendors);
         }
         if($country = request()->country){
             $datas->where('Countries', $country);
         }
-        $datas = $datas->take(1000);
+        if($bank = request()->bank){
+            $datas->where('Bank', $bank);
+        }
+        if($Type = request()->Type){
+            $datas->where('Type', $Type);
+        }
+        $datas = $datas->take(1000)->get();
 
         return view('pages.home', compact(
             'banks',
             'countrys',
 
             'datas',
-            'key',
         ));
     }
 
