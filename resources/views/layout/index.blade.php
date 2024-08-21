@@ -114,7 +114,11 @@
                                         Reset
                                     </a>
                                 </td>
-                                <td colspan="3"></td>
+                                <td colspan="3">
+                                    <a href="{{ asset('') }}" class="btn btn-primary">
+                                        Reset
+                                    </a>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
