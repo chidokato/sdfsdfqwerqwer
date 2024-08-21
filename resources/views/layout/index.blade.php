@@ -6,7 +6,8 @@
     <meta charset="utf-8">
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello, world!</title>
+    <title>Best Free BIN Checker, download Bin list free</title>
+    <meta name="description" content="BIN finder for online binchecker service for credit debit, prepaid or charge cards. Search Binlist numbers filtered by country, city, issuing bank. Download bin list for free"/>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css"><!-- select2 multiple css -->
