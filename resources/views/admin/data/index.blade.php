@@ -6,7 +6,7 @@
 <?php use App\Models\CategoryTranslation; ?>
 <div class="d-sm-flex align-items-center justify-content-between mb-3 flex">
     <h2 class="h3 mb-0 text-gray-800 line-1 size-1-3-rem">Data list</h2>
-    <a class="add-iteam"  href="{{route('dellall')}}"><button onclick="return confirm('Delete All ??? ')" class="btn-danger form-control" type="button">Delete All</button></a>
+    <a class="add-iteam"  href="{{route('dellall')}}"><button onclick="return confirm('Delete All ??? ')" class="btn-danger form-control" type="button">Delete All (50 thousand records)</button></a>
 
     <form action="{{ route('data.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
