@@ -116,7 +116,7 @@
                                 </td>
                                 <td colspan="3">
                                     <a href="{{ asset('') }}" class="btn btn-primary">
-                                        Reset
+                                        Home
                                     </a>
                                 </td>
                             </tr>
