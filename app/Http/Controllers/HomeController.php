@@ -27,75 +27,39 @@ class HomeController extends Controller
         ]);
     }
 
-    public function index(Request $request)
+    public function index()
     {
         $banks = Bank::orderBy('name', 'asc')->get();
         $countrys = Country::orderBy('name', 'asc')->get();
 
-        $perPage = $request->get('per_page', 1000);
-
-        if (!$request->hasAny(['bin', 'bank', 'country'])) {
-            $Datas = new LengthAwarePaginator([], 0, $perPage, 1, [
-                'path' => LengthAwarePaginator::resolveCurrentPath()
-            ]);
-        } else {
-            $bins = array_filter(preg_split('/\r\n|\r|\n/', $request->get('bin', '')));
-            $vendors = (array) $request->get('vendor', []);
-            $Types = (array) $request->get('Type', []);
-            $Levels = (array) $request->get('Level', []);
-
-            $query = Data::query();
-            if (!empty($bins)) {
-                $query->whereIn('Bin', $bins);
-            }
-            if (!empty($vendors)) {
-                $query->whereIn('Brand', $vendors);
-            }
-            if (!empty($Types)) {
-                $query->whereIn('Type', $Types);
-            }
-            if (!empty($Levels)) {
-                $query->whereIn('Level', $Levels);
-            }
-            if ($request->get('bank', '')) {
-                $query->where('bank', $request->get('bank', ''));
-            }
-            if ($request->get('country', '')) {
-                $query->where('Countries', $request->get('country', ''));
-            }
-            $Datas = $query->paginate($perPage);
-        }
-
         return view('pages.home', compact(
-            'request',
             'banks',
             'countrys',
-            'Datas',
         ));
     }
 
-    // public function search(Request $request)
-    // {
-    //     $banks = Bank::orderBy('name', 'asc')->get();
-    //     $countrys = Country::orderBy('name', 'asc')->get();
+    public function search(Request $request)
+    {
+        $banks = Bank::orderBy('name', 'asc')->get();
+        $countrys = Country::orderBy('name', 'asc')->get();
 
-    //     $datas = Data::orderBy('id', 'DESC');
-    //     if($key = request()->key){
-    //         $datas->where('Bin', $key);
-    //     }
-    //     if($country = request()->country){
-    //         $datas->where('Countries', $country);
-    //     }
-    //     $datas = $datas->take(1000);
+        $datas = Data::orderBy('id', 'DESC');
+        if($key = request()->key){
+            $datas->where('Bin', $key);
+        }
+        if($country = request()->country){
+            $datas->where('Countries', $country);
+        }
+        $datas = $datas->take(1000);
 
-    //     return view('pages.home', compact(
-    //         'banks',
-    //         'countrys',
+        return view('pages.home', compact(
+            'banks',
+            'countrys',
 
-    //         'datas',
-    //         'key',
-    //     ));
-    // }
+            'datas',
+            'key',
+        ));
+    }
 
     
     

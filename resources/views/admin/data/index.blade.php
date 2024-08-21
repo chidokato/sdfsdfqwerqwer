@@ -6,14 +6,13 @@
 <?php use App\Models\CategoryTranslation; ?>
 <div class="d-sm-flex align-items-center justify-content-between mb-3 flex">
     <h2 class="h3 mb-0 text-gray-800 line-1 size-1-3-rem">Data list</h2>
-    <!-- <a class="add-iteam" href="{{route('data.create')}}"><button class="btn-success form-control" type="button"><i class="fa fa-plus" aria-hidden="true"></i> Upfile .TXT</button></a> -->
+    <a class="add-iteam"  href="{{route('dellall')}}"><button onclick="return confirm('Delete All ??? ')" class="btn-danger form-control" type="button">Delete All</button></a>
 
     <form action="{{ route('data.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <input type="file" name="txt_file" accept=".txt">
         <button type="submit" class="btn-success">Upload</button>
     </form>
-
 </div>
 
 <div class="row">

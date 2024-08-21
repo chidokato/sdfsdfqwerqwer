@@ -134,4 +134,13 @@ class DataController extends Controller
         Data::find($id)->delete();
         return redirect()->back();
     }
+
+    public function dellall()
+    {
+        $datas = Data::all();
+        foreach($datas as $val){
+            Data::find($val->id)->delete();
+        }
+        return redirect()->back();
+    }
 }

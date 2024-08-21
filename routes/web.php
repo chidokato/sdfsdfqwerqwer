@@ -39,6 +39,7 @@ Route::middleware(['auth'])->group(function () {
         // main
         Route::get('main', [MainController::class, 'index'])->name('admin');
         Route::resource('data',DataController::class);
+        Route::get('dellall', [DataController::class, 'dellall'])->name('dellall');
 
         Route::resource('users',UserController::class);
 
