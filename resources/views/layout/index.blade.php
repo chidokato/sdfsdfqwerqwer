@@ -10,8 +10,8 @@
     <meta name="description" content="BIN finder for online binchecker service for credit debit, prepaid or charge cards. Search Binlist numbers filtered by country, city, issuing bank. Download bin list for free"/>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assets/css/custom.css"><!-- select2 multiple css -->
-    <link href="admin_asset/select2/css/select2.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 
 </head>
@@ -107,16 +107,16 @@
                             </tr>
                             <tr class="button">
                                 <td>
-                                    <button type="submit" class="btn btn-success">Search</button>
+                                    <button type="submit" class="btn btn-success"><i class="fas fa-search"></i> Search</button>
                                 </td>
                                 <td>
                                     <a href="{{ asset('') }}" class="btn btn-warning">
-                                        Reset
+                                        <i class="fas fa-sync-alt"></i> Reset
                                     </a>
                                 </td>
                                 <td colspan="3">
                                     <a href="{{ asset('') }}" class="btn btn-primary">
-                                        Home
+                                        <i class="fas fa-home"></i> Home
                                     </a>
                                 </td>
                             </tr>
@@ -168,8 +168,15 @@
         </div>
     </section>
 
+    <a href="#" id="back-to-top" class="back-to-home">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="admin_asset/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/js.js"></script>
     
 </body>
 </html>

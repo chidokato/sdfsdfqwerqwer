@@ -16,3 +16,22 @@ label {
     white-space: nowrap;
 }
 .Level{ display:flex; flex-direction: column;}
+
+.back-to-home {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    z-index: 1000;
+    display: none;
+}
+
+.back-to-home:hover {
+    background-color: #0056b3;color:#fff 
+}
+
