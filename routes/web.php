@@ -17,7 +17,7 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']
      \UniSharp\LaravelFilemanager\Lfm::routes();
  });
 
-Route::get('admin', [LoginController::class, 'index'])->name('login');
+Route::get('login-admin-mrbin2k3', [LoginController::class, 'index'])->name('login');
 Route::post('admin', [LoginController::class, 'store']);
 Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 Route::post('account/register', [LoginController::class, 'register'])->name('register');
