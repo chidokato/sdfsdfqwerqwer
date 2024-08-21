@@ -137,7 +137,7 @@ class DataController extends Controller
 
     public function dellall()
     {
-        $datas = Data::take(10000)->get();
+        $datas = Data::take(20000)->get();
         foreach($datas as $val){
             Data::find($val->id)->delete();
         }
