@@ -170,7 +170,6 @@
             </div>
         </div>
     </section>
-    
     </div>
     <footer>
         <h3>DONATE</h3>
