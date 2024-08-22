@@ -74,7 +74,6 @@
                                     <td>{{$val->Countries}}</td>
                                     <td>{{$val->created_at}}</td>
                                     <td style="display: flex;">
-                                        <!-- <a href="{{route('data.edit',[$val->id])}}" class="mr-2"><i class="fas fa-edit" aria-hidden="true"></i></a> -->
                                         <form action="{{route('data.destroy', [$val->id])}}" method="POST">
                                           @method('DELETE')
                                           @csrf

@@ -13,27 +13,11 @@ use App\Http\Controllers\Admin\UploadController;
 use App\Http\Controllers\AjaxController;
 use App\Http\Controllers\HomeController;
 
-Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
-     \UniSharp\LaravelFilemanager\Lfm::routes();
- });
-
 Route::get('login-admin-mrbin2k3', [LoginController::class, 'index'])->name('login');
 Route::post('admin', [LoginController::class, 'store']);
 Route::get('logout', [LoginController::class, 'logout'])->name('logout');
-Route::post('account/register', [LoginController::class, 'register'])->name('register');
 
-
-Route::post('/upload', [UploadController::class, 'upload'])->name('upload');
-Route::get('admin/get-section', function () {
-    return view('admin.post.add_section')->render();
-});
-
-
-// ajax
-Route::group(['prefix'=>'ajax'],function(){
     
-});
-
 Route::middleware(['auth'])->group(function () {
     Route::prefix('admin')->group(function () {
         // main

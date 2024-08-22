@@ -476,7 +476,6 @@ label {color: #46515F;}
 .customize label{ margin-right:50px;}
 .form-check-input{ margin-left:-18px; margin-top: 5px; }
 
-/*.select2-container{ width:100% !important }*/
 
 .text-truncate-set {
     display: -webkit-box !important;
@@ -493,12 +492,6 @@ label {color: #46515F;}
 #myTable .even{ background:#f8f9fc }
 
 .admin-thumbnail{ width:40px; height:40px; object-fit:cover; }
-
-.ck-editor__editable_inline {
-    min-height: 400px; /* Chiều cao tối thiểu */
-    max-height: 600px; /* Chiều cao tối đa */
-    height: 500px; /* Chiều cao mặc định */
-}
 
 
  .file-input-wrapper {
