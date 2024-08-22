@@ -16,6 +16,9 @@
 
 </head>
 <body>
+    <div class="body">
+        
+    
     <form id="searchForm" action="{{ route('search') }}" method="POST">
         @csrf
     <section class="main">
@@ -34,7 +37,7 @@
                         <tbody>
                             <tr>
                                 <td class="bin">
-                                    <textarea placeholder="Each bin in a new line" name="bin" class="form-control" rows="6">  </textarea>
+                                    <textarea placeholder="Each bin in a new line" name="bin" class="form-control" rows="6"></textarea>
                                 </td>
                                 <td class="vendor">
                                     <label>
@@ -167,6 +170,13 @@
             </div>
         </div>
     </section>
+    </div>
+    <footer>
+        <h3>DONATE</h3>
+        <p>Bitcoin: 323FH6yXrJzMMLtyuTpw3ỴMVucPrfYkCW9</p>
+        <p>Litecoin: MJvSVBdkmsLJVrRz8kUsuym4Xr4Ft7pzHL</p>
+        <p>USDT(TRC20): TYNSTV7hkGV3JEDnrjDLkb8wMT4MKCz3u8</p>
+    </footer>
 
     <a href="#" id="back-to-top" class="back-to-home">
         <i class="fas fa-arrow-up"></i>

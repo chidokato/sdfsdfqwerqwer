@@ -1,6 +1,6 @@
 *{margin: 0;padding: 0;}
-body{background: url(../img/back.png);}
-.main{margin-top: 50px;}
+body{background: url(../img/back.png); }
+.main{padding-top: 50px;}
 .main h3{text-align: center;color: #fff;}
 .table-bordered td, .table-bordered th{color: #fff;}
 .table-bordered .bin{ padding:2px }
@@ -34,4 +34,8 @@ label {
 .back-to-home:hover {
     background-color: #0056b3;color:#fff 
 }
+.body{ min-height: 75vh }
+footer{text-align: center; border-top: 1px solid #ddd; color: #fff; padding: 30px; height: 25vh}
+footer h3{font-size: 2rem}
+footer p{}
 
