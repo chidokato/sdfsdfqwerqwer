@@ -34,7 +34,7 @@ label {
 .back-to-home:hover {
     background-color: #0056b3;color:#fff 
 }
-.body{ min-height: 75vh }
-footer{text-align: center; border-top: 1px solid #ddd; color: #fff; padding: 30px; height: 25vh}
+.body{ min-height: 80vh }
+footer{text-align: center; border-top: 1px solid #ddd; color: #fff; padding: 20px; height: 20vh}
 footer h3{font-size: 2rem}
 
