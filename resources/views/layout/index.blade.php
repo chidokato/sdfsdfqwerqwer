@@ -166,6 +166,10 @@
                     </table>
                     @endif
                 </div>
+                @else
+                <div class="col-md-12">
+                    <h3>Results (max 1000): 0</h3>
+                </div>
                 @endif
             </div>
         </div>
