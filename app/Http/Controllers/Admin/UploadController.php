@@ -51,6 +51,7 @@ class UploadController extends Controller
         }
 
         Log::error('File upload failed.');
+        
         return response()->json([
             'uploaded' => false,
             'error' => [

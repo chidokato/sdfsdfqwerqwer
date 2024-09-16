@@ -40,8 +40,8 @@ footer h3{font-size: 1.2rem}
 
 .advertise{ text-align:center; }
 .advertise img { max-width:100% }
-.advertise tr, .advertise td{ border:none; }
-.advertise td{ padding:3px; padding-bottom:.5rem }
-.advertise td figure{ margin:0 }
+.advertise tr, .advertise td, .advertise th{ border:none; }
+.advertise td, .advertise th{ padding:3px; padding-bottom:.5rem }
+.advertise td figure, .advertise th figure{ margin:0 }
 .advertise p{background: #313742; border: #464c58 solid 1px; padding: 4px; margin-bottom: .5rem}
 .advertise p a{ text-decoration:none; }
