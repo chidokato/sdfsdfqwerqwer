@@ -136,7 +136,7 @@
             <div class="row">
                 @if(isset($datas))
                 <div class="col-md-12">
-                    <h3>Results (max 1000): {{ count($datas) }}</h3>
+                    <h3>Results (max 3000): {{ count($datas) }}</h3>
                     @if(count($datas)>0)
                     <table class="table table-bordered">
                         <thead>
@@ -166,7 +166,7 @@
                 </div>
                 @else
                 <div class="col-md-12">
-                    <h3>Results (max 1000): 0</h3>
+                    <h3>Results (max 3000): 0</h3>
                 </div>
                 @endif
             </div>
@@ -174,10 +174,11 @@
     </section>
     </div>
     <footer>
-        <h3>DONATE</h3>
-        <p>Bitcoin: 323FH6yXrJzMMLtyuTpw3ỴMVucPrfYkCW9</p>
-        <p>Litecoin: MJvSVBdkmsLJVrRz8kUsuym4Xr4Ft7pzHL</p>
-        <p>USDT(TRC20): TYNSTV7hkGV3JEDnrjDLkb8wMT4MKCz3u8</p>
+        <h3>Ads &amp; buy database bins <a href="https://t.me/bybinnet" target="_blank" rel="noopener noreferrer">@bybinnet</a></h3>
+        <p>🥇Bitcoin: 323FH6yXrJzMLtyuTpw3YJMVucPrfYkCW9</p>
+        <p>🥈Litecoin: MJvSVBdkmsLJVrRz8kUsuym4Xr4Ft7pzHL</p>
+        <h3>Bin database updated March 2024. With more than 1 million Bins from 6 - 11 digits.</h3>
+
     </footer>
 
     <a href="#" id="back-to-top" class="back-to-home">
