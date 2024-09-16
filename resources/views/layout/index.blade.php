@@ -174,7 +174,7 @@
     </section>
     </div>
     <footer>
-        <h3>Ads &amp; buy database bins <a href="https://t.me/bybinnet" target="_blank" rel="noopener noreferrer">@bybinnet</a></h3>
+        <h3>Adss &amp; buy database bins <a href="https://t.me/bybinnet" target="_blank" rel="noopener noreferrer">@bybinnet</a></h3>
         <p>🥇Bitcoin: 323FH6yXrJzMLtyuTpw3YJMVucPrfYkCW9</p>
         <p>🥈Litecoin: MJvSVBdkmsLJVrRz8kUsuym4Xr4Ft7pzHL</p>
         <h3>Bin database updated March 2024. With more than 1 million Bins from 6 - 11 digits.</h3>
