@@ -13,6 +13,7 @@ use App\Models\User;
 use App\Models\Data;
 use App\Models\Bank;
 use App\Models\Country;
+use App\Models\Advertise;
 use Mail;
 use Image;
 use File;
@@ -31,10 +32,12 @@ class HomeController extends Controller
     {
         $banks = Bank::orderBy('name', 'asc')->get();
         $countrys = Country::orderBy('name', 'asc')->get();
+        $advertise = Advertise::find(1);
 
         return view('pages.home', compact(
             'banks',
             'countrys',
+            'advertise',
         ));
     }
 

@@ -22,6 +22,11 @@
     <section class="main">
         <div class="container">
             <div class="row">
+                <div class="col-md-12 advertise">
+                    {!! $advertise->content !!}
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-md-12">
                     <table class="table table-bordered">
                         <thead>
@@ -133,6 +138,7 @@
 
     <section class="main">
         <div class="container">
+            
             <div class="row">
                 @if(isset($datas))
                 <div class="col-md-12">
