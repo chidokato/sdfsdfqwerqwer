@@ -64,7 +64,7 @@ class HomeController extends Controller
         if($Type = request()->Type){
             $datas->where('Type', $Type);
         }
-        $datas = $datas->take(1000)->get();
+        $datas = $datas->take(3000)->get();
 
         return view('pages.home', compact(
             'banks',

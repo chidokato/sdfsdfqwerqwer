@@ -25,7 +25,7 @@
         <a class="nav-link" href="{{route('data.index')}}"><i class="fas fa-fw fa-chart-area"></i><span>Data</span></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="{{route('data.index')}}"><i class="fas fa-fw fa-chart-area"></i><span>Ads</span></a>
+        <a class="nav-link" href="{{route('advertise.index')}}"><i class="fas fa-fw fa-chart-area"></i><span>Advertise</span></a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="{{route('users.index')}}"><i class="fas fa-fw fa-chart-area"></i><span>Users</span></a>
