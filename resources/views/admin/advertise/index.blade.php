@@ -60,25 +60,30 @@
 <script src="https://cdn.jsdelivr.net/npm/@ckeditor/ckeditor5-alignment@42.0.1/+esm" type="text/javascript"></script>
 <script>
     document.querySelectorAll('.editor').forEach((editorElement) => {
-        ClassicEditor
-            .create(editorElement, {
-                alignment: {
-                    options: [ 'left', 'right' ]
-                },
-                ckfinder: {
-                    uploadUrl: '{{ route("upload") }}?_token={{ csrf_token() }}'
-                },
+    ClassicEditor
+        .create(editorElement, {
+            alignment: {
+                options: [ 'left', 'right' ]
+            },
+            ckfinder: {
+                uploadUrl: '{{ route("upload") }}?_token={{ csrf_token() }}'
+            },
+            toolbar: [
+                'undo', 'redo', 'imageUpload', '|', 
+                'bold', 'italic', 'heading', 'bulletedList', 'numberedList', 
+                'link', 'insertTable', 'blockQuote', 'removeFormat', 'alignment',
+            ],
+            image: {
                 toolbar: [
-                    'undo', 'redo', 'imageUpload',  '|', 
-                    'bold', 'italic', 'heading', 'bulletedList', 'numberedList', 
-                    'link', 'insertTable', 'blockQuote', 'removeFormat', 'alignment',
-                ],
-                
-                
-            })
-            .catch(error => {
-                console.error(error);
-            });
-    });
+                    'imageTextAlternative', 'linkImage', 'imageStyle:inline', 
+                    'imageStyle:block', 'imageStyle:side'
+                ]
+            }
+        })
+        .catch(error => {
+            console.error(error);
+        });
+});
+
 </script>
 @endsection

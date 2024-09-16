@@ -209,6 +209,13 @@
     })();</script>
     <noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4890180&101" alt="" border="0"></a></noscript>
     <!-- Histats.com  END  -->
+
+    <script type="text/javascript">
+    document.querySelectorAll('div.advertise a').forEach(function(link) {
+        link.setAttribute('target', '_blank');
+    });
+
+    </script>
     
 </body>
 </html>
