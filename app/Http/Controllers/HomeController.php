@@ -43,6 +43,7 @@ class HomeController extends Controller
 
     public function search(Request $request)
     {
+        $advertise = Advertise::find(1);
         $banks = Bank::orderBy('name', 'asc')->get();
         $countrys = Country::orderBy('name', 'asc')->get();
 
@@ -74,6 +75,7 @@ class HomeController extends Controller
             'countrys',
 
             'datas',
+            'advertise',
         ));
     }
 
