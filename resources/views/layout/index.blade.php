@@ -31,8 +31,8 @@
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th scope="col">BIN's</th>
-                                <th scope="col">VENDOR</th>
+                                <th scope="col">BIN's. Search by up to 11 digits per bin</th>
+                                <th scope="col">BRAND</th>
                                 <th scope="col" colspan="2">LEVEL</th>
                                 <th scope="col">REGION</th>
                             </tr>
@@ -40,7 +40,7 @@
                         <tbody>
                             <tr>
                                 <td class="bin">
-                                    <textarea placeholder="Each bin in a new line" name="bin" class="form-control" rows="6"></textarea>
+                                    <textarea placeholder="Enter Bins. Max 5000 bins each time" name="bin" class="form-control" rows="6"></textarea>
                                 </td>
                                 <td class="vendor">
                                     <label>
@@ -100,7 +100,7 @@
                                         </select>
                                     </div>
                                     <div>
-                                        <label>RANK </label>
+                                        <label>TYPE </label>
                                         <label>
                                             <input type="checkbox" value="Credit" name="Type[]"> Credit
                                         </label>
@@ -142,17 +142,17 @@
             <div class="row">
                 @if(isset($datas))
                 <div class="col-md-12">
-                    <h3>Results (max 3000): {{ count($datas) }}</h3>
+                    <h3>Results (max 5000): {{ count($datas) }}</h3>
                     @if(count($datas)>0)
                     <table class="table table-bordered">
                         <thead>
                             <tr>
                                 <th scope="col">BIN's</th>
-                                <th scope="col">VENDOR</th>
+                                <th scope="col">BRAND</th>
+                                <th scope="col">TYPE</th>
                                 <th scope="col">LEVEL</th>
-                                <th scope="col">RANK</th>
                                 <th scope="col">BANK</th>
-                                <th scope="col">Countries</th>
+                                <th scope="col">COUNTRIES</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -160,8 +160,8 @@
                             <tr>
                                 <td>{{$val->Bin}}</td>
                                 <td>{{$val->Brand}}</td>
-                                <td>{{$val->Level}}</td>
                                 <td>{{$val->Type}}</td>
+                                <td>{{$val->Level}}</td>
                                 <td>{{$val->Bank}}</td>
                                 <td>{{$val->Countries}}</td>
                             </tr>
@@ -172,20 +172,17 @@
                 </div>
                 @else
                 <div class="col-md-12">
-                    <h3>Results (max 3000): 0</h3>
+                    <h3>Results (max 5000): 0</h3>
                 </div>
                 @endif
             </div>
         </div>
     </section>
     </div>
-    <footer>
+    <!-- <footer>
         <h3>Ads &amp; buy database bins <a href="https://t.me/bybinnet" target="_blank" rel="noopener noreferrer">@bybinnet</a></h3>
-        <p>🥇Bitcoin: 323FH6yXrJzMLtyuTpw3YJMVucPrfYkCW9</p>
-        <p>🥈Litecoin: MJvSVBdkmsLJVrRz8kUsuym4Xr4Ft7pzHL</p>
-        <h3>Bin database updated March 2024. With more than 1 million Bins from 6 - 11 digits.</h3>
-
-    </footer>
+        <p>Bin database updated March 2024. With more than 1 million Bins from 6 - 11 digits.</p>
+    </footer> -->
 
     <a href="#" id="back-to-top" class="back-to-home">
         <i class="fas fa-arrow-up"></i>
@@ -196,19 +193,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="admin_asset/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/js.js"></script>
-        
-    <!-- Histats.com  START  (aync)-->
-    <script type="text/javascript">var _Hasync= _Hasync|| [];
-    _Hasync.push(['Histats.start', '1,4890180,4,0,0,0,00010000']);
-    _Hasync.push(['Histats.fasi', '1']);
-    _Hasync.push(['Histats.track_hits', '']);
-    (function() {
-    var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
-    hs.src = ('//s10.histats.com/js15_as.js');
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
-    })();</script>
-    <noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4890180&101" alt="" border="0"></a></noscript>
-    <!-- Histats.com  END  -->
 
     <script type="text/javascript">
     document.querySelectorAll('div.advertise a').forEach(function(link) {
@@ -216,6 +200,22 @@
     });
 
     </script>
-    
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(98233249, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/98233249" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </body>
 </html>

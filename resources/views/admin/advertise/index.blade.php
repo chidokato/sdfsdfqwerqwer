@@ -1,5 +1,9 @@
 @extends('admin.layout.main')
 
+@section('css')
+<link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/43.1.1/ckeditor5.css">
+@endsection
+
 @section('content')
 @include('admin.alert')
 <form method="post" action="{{route('advertise.update', [$data->id])}}" enctype="multipart/form-data">
@@ -37,10 +41,14 @@
                           </div>
                           <div class="col-md-12">
                               <div class="form-group">
-                                  <label>Content</label>
-                                  <textarea name="content" class="form-control editor">{!! $data->content !!}</textarea>
+                                    <label>Content</label>
+
+                                    <div class="main-container">
+                                        <textarea name="content" class="form-control" id="editor">{!! $data->content !!}</textarea>
+                                    </div>
                               </div>
                           </div>
+
                       </div>
                   </div>
                 </div>
@@ -56,34 +64,46 @@
 @endsection
 
 @section('js')
-<script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/ckeditor.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@ckeditor/ckeditor5-alignment@42.0.1/+esm" type="text/javascript"></script>
-<script>
-    document.querySelectorAll('.editor').forEach((editorElement) => {
-    ClassicEditor
-        .create(editorElement, {
-            alignment: {
-                options: [ 'left', 'right' ]
-            },
-            ckfinder: {
-                uploadUrl: '{{ route("upload") }}?_token={{ csrf_token() }}'
-            },
-            toolbar: [
-                'undo', 'redo', 'imageUpload', '|', 
-                'bold', 'italic', 'heading', 'bulletedList', 'numberedList', 
-                'link', 'insertTable', 'blockQuote', 'removeFormat', 'alignment',
-            ],
-            image: {
-                toolbar: [
-                    'imageTextAlternative', 'linkImage', 'imageStyle:inline', 
-                    'imageStyle:block', 'imageStyle:side'
-                ]
-            }
-        })
-        .catch(error => {
-            console.error(error);
-        });
-});
+<script type="importmap">
+    {
+        "imports": {
+            "ckeditor5": "https://cdn.ckeditor.com/ckeditor5/43.1.1/ckeditor5.js",
+            "ckeditor5/": "https://cdn.ckeditor.com/ckeditor5/43.1.1/"
+        }
+    }
+</script>
 
+<script type="module">
+    import {
+        ClassicEditor,
+        Essentials,
+        Paragraph,
+        Bold,
+        Italic,
+        Font
+    } from 'ckeditor5';
+
+    ClassicEditor
+        .create( document.querySelector( '#editor' ), {
+            plugins: [ Essentials, Paragraph, Bold, Italic, Font ],
+            toolbar: [
+                'undo', 'redo', '|', 'bold', 'italic', '|',
+                'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor'
+            ]
+        } )
+        .then( editor => {
+            window.editor = editor;
+        } )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
+<!-- A friendly reminder to run on a server, remove this during the integration. -->
+<script>
+        window.onload = function() {
+            if ( window.location.protocol === "file:" ) {
+                alert( "This sample requires an HTTP server. Please serve this file with a web server." );
+            }
+        };
 </script>
 @endsection
