@@ -49,6 +49,7 @@ class HomeController extends Controller
         $advertise = Advertise::find(1);
         $banks = Bank::orderBy('name', 'asc')->get();
         $countrys = Country::orderBy('name', 'asc')->get();
+        $images = Images::get();
 
         $bins = array_filter(preg_split('/\r\n|\r|\n/', $request->bin));
 
@@ -79,6 +80,7 @@ class HomeController extends Controller
 
             'datas',
             'advertise',
+            'images'
         ));
     }
 
