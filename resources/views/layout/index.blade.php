@@ -28,7 +28,7 @@
                 @foreach($images as $val)
                 <div class="{{$val->row}}">
                     <div class="img">
-                        <img src="uploads/{{$val->img}}">
+                        <a target="_blank" href="{{$val->link}}"><img src="uploads/{{$val->img}}"></a>
                     </div>
                 </div>
                 @endforeach
