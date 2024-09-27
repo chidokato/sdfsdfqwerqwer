@@ -39,9 +39,12 @@ footer{text-align: center; border-top: 1px solid #ddd; color: #fff; padding: 20p
 footer h3{font-size: 1.2rem}
 
 .advertise{ text-align:center; }
-.advertise img { max-width:100% }
+
 .advertise tr, .advertise td, .advertise th{ border:none; }
 .advertise td, .advertise th{ padding:3px; padding-bottom:.5rem }
 .advertise td figure, .advertise th figure{ margin:0 }
-.advertise p{background: #313742; border: #464c58 solid 1px; padding: 4px; margin-bottom: .5rem}
+.advertise p{background: #313742; border: #464c58 solid 1px; padding: 4px; margin-bottom: .5rem; color: #fff;}
 .advertise p a{ text-decoration:none; }
+
+.advertise .img{ margin-bottom:.5rem }
+.advertise img { max-width:100% }

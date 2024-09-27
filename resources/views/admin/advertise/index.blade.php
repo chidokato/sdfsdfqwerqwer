@@ -55,13 +55,21 @@
                             <div class="col-md-12">
                                 @foreach($images as $val)
                                 <div class="file-upload">
+                                    <input type="hidden" value="{{$val->id}}" name="id_edit[]">
                                     <div class="file-upload-content" onclick="$(this).siblings('.image-upload-wrap').find('.file-upload-input').trigger('click')">
                                         <img class="file-upload-image" src="uploads/{{$val->img}}" />
                                     </div>
                                     <div class="image-upload-wrap">
                                         <input name="img_edit[]" class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
                                     </div>
-                                    <div><input value="{{$val->link}}" name="link_edit[]" placeholder="insert link" type="text" class="form-control"></div>
+                                    <div class="input-group">
+                                        <input value="{{$val->link}}" name="link_edit[]" placeholder="insert link" type="text" class="form-control">
+                                        <select name="row_edit[]" class="form-control">
+                                            <option {{$val->row == 'col-md-12' ? 'selected':''}} value="col-md-12">1</option>
+                                            <option {{$val->row == 'col-md-6' ? 'selected':''}} value="col-md-6">2</option>
+                                            <option {{$val->row == 'col-md-4' ? 'selected':''}} value="col-md-4">3</option>
+                                        </select>
+                                    </div>
                                     <button id="dell_images" data-id="{{ $val->id }}" class="btn btn-danger remove-upload" type="button">X</button>
                                 </div>
                                 @endforeach
@@ -122,31 +130,34 @@
 
 <script type="module">
     import {
-    ClassicEditor,
-    Paragraph,
-    Bold,
-    Italic,
-    Font,
-    Link,
-    SourceEditing,
-    Enter
-} from 'ckeditor5';
+        ClassicEditor,
+        Paragraph,
+        Bold,
+        Italic,
+        Font,
+        Link,
+        SourceEditing,
+        RemoveFormat,
+        Enter,
+        Alignment
+    } from 'ckeditor5';
 
-ClassicEditor
-    .create(document.querySelector('#editor'), {
-        plugins: [Paragraph, Bold, Italic, Font, Link, SourceEditing, Enter],
-        toolbar: [
-            'bold', 'italic', '|',
-            'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', '|', 'link', '|', 'sourceEditing'
-        ]
-    })
-    .then(editor => {
-        window.editor = editor;
-    })
-    .catch(error => {
-        console.error(error);
-    });
-;
+    ClassicEditor
+        .create(document.querySelector('#editor'), {
+            plugins: [Paragraph, Bold, Italic, Font, Link, SourceEditing, RemoveFormat, Enter, Alignment ],
+            toolbar: [
+                'bold', 'italic', '|',
+                'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', '|',
+                'link', '|', 'sourceEditing', '|', 'removeFormat',
+                'alignment:left', 'alignment:center', 'alignment:right'
+            ]
+        })
+        .then(editor => {
+            window.editor = editor;
+        })
+        .catch(error => {
+            console.error(error);
+        });
 </script>
 
 <script type="text/javascript">

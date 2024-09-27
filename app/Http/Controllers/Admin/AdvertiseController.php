@@ -119,6 +119,7 @@ class AdvertiseController extends Controller
             foreach ($data['id_edit'] as $key => $id_edit) {
                 $image = Images::find($id_edit);
                 $image->link = $data['link_edit'][$key];
+                $image->row = $data['row_edit'][$key];
                 if($request->hasFile("img_edit.$key")){
                     if(File::exists('uploads/'.$image->img)) { File::delete('uploads/'.$image->img);}
                     $file = $request->file("img_edit.$key");

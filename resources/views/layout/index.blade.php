@@ -21,10 +21,18 @@
         @csrf
     <section class="main">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12 advertise">
+            <div class="row advertise">
+                <div class="col-md-12">
                     {!! $advertise->content !!}
                 </div>
+                @foreach($images as $val)
+                <div class="{{$val->row}}">
+                    <div class="img">
+                        <img src="uploads/{{$val->img}}">
+                    </div>
+                </div>
+                @endforeach
+
             </div>
             <div class="row">
                 <div class="col-md-12">
