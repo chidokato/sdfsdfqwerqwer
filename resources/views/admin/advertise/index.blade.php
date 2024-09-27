@@ -196,7 +196,14 @@ $(document).ready(function() {
                 <div class="image-upload-wrap">
                     <input name="img[]" class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
                 </div>
-                <div><input name="link[]" placeholder="insert link" type="text" class="form-control"></div>
+                <div class="input-group">
+                    <input name="link[]" placeholder="insert link" type="text" class="form-control">
+                    <select name="row[]" class="form-control">
+                        <option value="col-md-12">1</option>
+                        <option value="col-md-6">2</option>
+                        <option value="col-md-4">3</option>
+                    </select>
+                </div>
                 <button class="btn btn-danger remove-upload" type="button">X</button>
             </div>
         `;

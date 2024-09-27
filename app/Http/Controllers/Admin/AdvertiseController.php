@@ -137,6 +137,7 @@ class AdvertiseController extends Controller
                     $filename = $this->saveImage($file);
                     $images->img = $filename;
                     $images->link = $data['link'][$key];
+                    $images->row = $data['row'][$key];
                     $images->save();
                 }
             }
