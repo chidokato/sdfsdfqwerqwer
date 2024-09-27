@@ -22,17 +22,28 @@ class AdvertiseController extends Controller
         $extension = $file->getClientOriginalExtension();
         $filename = $filenameWithoutExtension . '.' . $extension;
 
+        // Handle duplicate filenames
         while (file_exists(public_path($path . $filename))) {
             $filename = $filenameWithoutExtension . '_' . rand(0, 99) . '.' . $extension;
         }
-        $img = Image::make($file);
-        $img->resize($maxWidth, $maxHeight, function ($constraint) {
-            $constraint->aspectRatio();
-            $constraint->upsize();
-        });
-        $img->save(public_path($path . $filename));
+
+        // Check if the file is a GIF
+        if (strtolower($extension) === 'gif') {
+            // No resizing for GIFs, just save them as they are
+            $file->move(public_path($path), $filename);
+        } else {
+            // Resize non-GIFs
+            $img = Image::make($file);
+            $img->resize($maxWidth, $maxHeight, function ($constraint) {
+                $constraint->aspectRatio();
+                $constraint->upsize();
+            });
+            $img->save(public_path($path . $filename));
+        }
+
         return $filename;
     }
+
 
     /**
      * Display a listing of the resource.
