@@ -8,9 +8,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Session;
 
-// use Illuminate\Support\Facades\Log;
-// use Intervention\Image\Facades\Image;
-
 use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Support\Facades\Log;
 
@@ -25,18 +22,14 @@ class UploadController extends Controller
             $filename = time() . '.' . $file->getClientOriginalExtension();
             $destinationPath = public_path('/uploads');
 
-            // Kiểm tra nếu tệp là GIF
             if ($file->getClientOriginalExtension() !== 'gif') {
-                // Resize ảnh nếu không phải GIF
                 $image = Image::make($file)->resize(1500, 1500, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
                 });
 
-                // Lưu ảnh đã resize
                 $image->save($destinationPath . '/' . $filename);
             } else {
-                // Chỉ lưu ảnh gốc nếu là GIF
                 $file->move($destinationPath, $filename);
             }
 

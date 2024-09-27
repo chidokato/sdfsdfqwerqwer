@@ -20,6 +20,7 @@ Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::post('/upload', [UploadController::class, 'upload'])->name('upload');
 
+
 Route::middleware(['auth'])->group(function () {
     Route::prefix('admin')->group(function () {
         // main
@@ -27,8 +28,11 @@ Route::middleware(['auth'])->group(function () {
         Route::resource('data',DataController::class);
         
         Route::get('dellall', [DataController::class, 'dellall'])->name('dellall');
+        
 
         Route::resource('advertise',AdvertiseController::class);
+
+        Route::get('delimg/{id}', [AdvertiseController::class, 'delimg'])->name('delimg');
 
         Route::resource('users',UserController::class);
 

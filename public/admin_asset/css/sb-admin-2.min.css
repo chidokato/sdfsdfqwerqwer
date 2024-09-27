@@ -19,7 +19,8 @@
 .file-upload-input {
     opacity: 0;width: 100%;
 }
-.image-upload-wrap{position: absolute; top: 0;} .file-upload{position: relative;}
+.image-upload-wrap{position: absolute; top: 0;}
+.file-upload{position: relative; margin-bottom: 1rem}
 .file-upload-image {
     width: 100%;
     /*margin: 10px 0px;*/
@@ -539,8 +540,8 @@ label {color: #46515F;}
 
 
         .file-upload-image, .file-upload-content {
-    width: 205px;
-    height: 205px;
+    width: auto;
+    height: 130px;
     margin-right: 5px;
 }
 
