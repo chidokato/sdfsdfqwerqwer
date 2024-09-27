@@ -540,9 +540,8 @@ label {color: #46515F;}
 
 
         .file-upload-image, .file-upload-content {
-    width: auto;
+    max-width: 100%;
     height: 130px;
-    margin-right: 5px;
 }
 
 
