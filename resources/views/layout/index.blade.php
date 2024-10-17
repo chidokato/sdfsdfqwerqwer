@@ -11,7 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 </head>
 <body>
     <div class="body">
@@ -100,7 +100,7 @@
                                     </div>
                                     <div>
                                         <label>BANK </label>
-                                        <select name="bank" class="">
+                                        <select name="bank" class="js-example">
                                             <option value="">all</option>
                                             @foreach($banks as $val)
                                             <option value="{{$val->name}}">{{$val->name}}</option>
@@ -201,7 +201,12 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="admin_asset/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/js.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.js-example').select2();
+        });
+    </script>
     <script type="text/javascript">
     document.querySelectorAll('div.advertise a').forEach(function(link) {
         link.setAttribute('target', '_blank');
