@@ -92,7 +92,7 @@
                                     <div>
                                         <label>COUNTRY</label>
                                         <select name="country" class="js-example">
-                                            <option value="">all</option>
+                                            <option value="">ALL</option>
                                             @foreach($countrys as $val)
                                             <option value="{{$val->name}}">{{$val->name}}</option>
                                             @endforeach
@@ -101,7 +101,7 @@
                                     <div>
                                         <label>BANK </label>
                                         <select name="bank" class="js-example">
-                                            <option value="">all</option>
+                                            <option value="">ALL</option>
                                             @foreach($banks as $val)
                                             <option value="{{$val->name}}">{{$val->name}}</option>
                                             @endforeach
